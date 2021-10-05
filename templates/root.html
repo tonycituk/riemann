@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumas de Riemann</title>
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="static/site.webmanifest">
+</head>
+
+<body>
+    <section class="hero is-danger">
+        <div class="hero-body">
+            <p class="title">
+                Suma de Riemann
+            </p>
+            <p class="subtitle">
+                Llena todos los datos y selecciona que tipo de punto muestra
+            </p>
+        </div>
+    </section>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-half-desktop is-offset-one-quarter-desktop is-10 is-offset-1">
+                <form class="mt-5" method="GET">
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Intervalo: [a,b]</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input name="a" class="input" type="text" placeholder="-1" value="-1">
+                                </p>
+                            </div>
+                            <div class="field">
+                                <p class="control">
+                                    <input name="b" class="input" type="text" placeholder="2" value="2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Partición de orden:</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input name="n" class="input" type="text" placeholder="50" value=50>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Valores para la función polinómica</label>
+                        <label class="label">ax³ + bx² + cx + d</label>
+
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">a</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input class="input" name="ax" type="text" placeholder="0" value="0">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-static">
+                                        x³
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">b</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input name="bx" class="input" type="text" placeholder="-1" value="-1">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-static">
+                                        x²
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">c</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input name="cx" class="input" type="text" placeholder="0" value=0>
+                                </p>
+                                <p class="control">
+                                    <a class="button is-static">
+                                        x
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">d</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input class="input" name="d" type="text" placeholder="4" value="4">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-grouped is-grouped-centered">
+                        <p class="control">
+                            <input class="button is-link" class="button is-link" formaction="/mid" type="submit"
+                                value="Punto medio">
+                        </p>
+                        <p class="control">
+                            <input class="button is-primary" class="button is-link" formaction="/right" type="submit"
+                                value="Por la derecha">
+                        </p>
+                        <p class="control">
+                            <input class="button is-warning" class="button is-link" formaction="/left" type="submit"
+                                value="Por la izquierda">
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>
